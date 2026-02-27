@@ -1,0 +1,18 @@
+# --- VibeOS Build Artifacts ---
+# Compiled object files
+*.o
+
+# Executable and Linkable Format (the kernel binary)
+*.elf
+
+# Any raw binary images or ISOs you might generate later
+*.bin
+*.img
+*.iso
+
+# --- Editor & System Junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
