@@ -46,17 +46,17 @@
 - [x] Implement page table setup
 - [x] Add virtual memory support
 
-## Phase 4: Process Management
-- [ ] Create process control block (PCB) structure with state/priority/context
-- [ ] Add process table (linked list or array-based)
-- [ ] Implement task context save/restore (register state)
-- [ ] Implement context switching at privilege boundary
-- [ ] Implement timer interrupt handler (mtimer for RISC-V)
-- [ ] Add simple round-robin scheduler with time slices
-- [ ] Implement process creation (fork with copy-on-write concept)
-- [ ] Implement process termination with cleanup
-- [ ] Add process state transitions (ready/running/blocked/zombie)
-- [ ] Implement wait/reap for process synchronization
+## Phase 4: Process Management (COMPLETED ✅)
+- [x] Create process control block (PCB) structure with state/priority/context
+- [x] Add process table (linked list or array-based)
+- [x] Implement task context save/restore (register state)
+- [x] Implement context switching at privilege boundary
+- [x] Implement timer interrupt handler (mtimer for RISC-V)
+- [x] Add simple round-robin scheduler with time slices
+- [x] Implement process creation (fork with copy-on-write concept)
+- [x] Implement process termination with cleanup
+- [x] Add process state transitions (ready/running/blocked/zombie)
+- [x] Implement wait/reap for process synchronization
 
 ## Phase 5: System Calls & Traps
 - [ ] Set up ecall trap handler in S-mode
@@ -118,19 +118,19 @@
 - [ ] Add performance profiling timer
 - [ ] Add debug breakpoint support
 
-## Phase 9: Interrupt & Exception Handling
-- [ ] Set up RISC-V interrupt/exception vector in stvec
-- [ ] Implement trap handler entry point in assembly
-- [ ] Implement context switching in trap handler
-- [ ] Add timer interrupt handler (mtimer via SBI)
-- [ ] Implement external interrupt dispatcher
-- [ ] Add page fault handler (invalid memory access)
-- [ ] Implement illegal instruction handler
-- [ ] Add privileged instruction exception handler
-- [ ] Implement interrupt context preservation (all registers)
-- [ ] Add interrupt priority/nesting support
-- [ ] Implement interrupt masking (SIE register)
-- [ ] Add software interrupt support for IPI
+## Phase 9: Interrupt & Exception Handling (COMPLETED ✅)
+- [x] Set up RISC-V interrupt/exception vector in stvec
+- [x] Implement trap handler entry point in assembly
+- [x] Implement context switching in trap handler
+- [x] Add timer interrupt handler (mtimer via SBI)
+- [x] Implement external interrupt dispatcher
+- [x] Add page fault handler (invalid memory access)
+- [x] Implement illegal instruction handler
+- [x] Add privileged instruction exception handler
+- [x] Implement interrupt context preservation (all registers)
+- [x] Add interrupt priority/nesting support
+- [x] Implement interrupt masking (SIE register)
+- [x] Add software interrupt support for IPI
 
 ## Phase 10: Virtual Memory & Paging
 - [ ] Set up page table structures (page tables for S-mode)
@@ -301,17 +301,16 @@
 ---
 
 ## Progress Summary
-**Completed:** 39/162
+**Completed:** 59/162
 **In Progress:** 0/162
-**Not Started:** 123/162
+**Not Started:** 103/162
 
 ## Update Notes
-- **Phase 6 Updated:** Now specifically FAT16 filesystem with detailed cluster/FAT operations
-- **Phase 4-5:** Added more technical details for process management and syscalls
-- **Phase 7-9:** Expanded with RISC-V specific details and relocation info
-- **Phases 13-22:** Significantly enhanced with specific requirements and commands
-- **New Phase 10:** Virtual memory & paging moved to dedicated phase
-- **New Phases 20-22:** Networking, optimization, and device framework
+- **Phase 4 & 9 Complete:** Interrupt handling and process management implemented
+- Process table with round-robin scheduling
+- Trap handler with register save/restore in assembly
+- Timer interrupt infrastructure ready
+- Process state management (READY/RUNNING/BLOCKED/ZOMBIE)
 
 ## Implementation Notes
 - FAT16 chosen for simplicity while being practical
